@@ -35,26 +35,29 @@ const ImageEditor = () => {
       }
       ctx.putImageData(imageData, 0, 0);
     };
-    return (
-      <div className="text-center p-4">
-        <input type="file" onChange={handleImageUpload} className="mb-4" />
-        <div>
-          <button
-            onClick={() => applyFilter("grayscale")}
-            className="bg-blue-500 text-white px-4 py-2 m-2 rounded"
-          >
-            Escala de Grises
-          </button>
-          <button
-            onClick={() => applyFilter("invert")}
-            className="bgred-500 text-white px-4 py-2 m-2 rounded"
-          >
-            Invertir Colores
-          </button>
-        </div>
-        <canvas ref={canvasRef} className="border mt-4"></canvas>
-      </div>
-    );
   };
+  return (
+    <div className="text-center p-4">
+      <label className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all shadow-md active:scale-95 mb-4">
+        Seleccionar Archivo
+      <input type="file" onChange={handleImageUpload} className="hidden" />
+      </label>
+      <div>
+        <button
+          onClick={() => applyFilter("grayscale")}
+          className="bg-blue-500 text-white px-4 py-2 m-2 rounded"
+        >
+          Escala de Grises
+        </button>
+        <button
+          onClick={() => applyFilter("invert")}
+          className="bgred-500 text-white px-4 py-2 m-2 rounded"
+        >
+          Invertir Colores
+        </button>
+      </div>
+      <canvas ref={canvasRef} className="border mt-4"></canvas>
+    </div>
+  );
 };
 export default ImageEditor;
