@@ -1,4 +1,5 @@
 import FigmaComponent from "./FigmaComponent";
+import TestEjercicio4 from "./TestEjercicio4";
 const Ejercicio4 = () => {
   return (
     <div className="p-6">
@@ -10,6 +11,7 @@ const Ejercicio4 = () => {
         componente React.
       </p>
       <FigmaComponent />
+      <TestEjercicio4 />
     </div>
   );
 };

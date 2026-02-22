@@ -5,14 +5,13 @@ const FigmaComponent = () => {
       <p className="text-gray-600">
         Este componente fue diseñado en Figma y convertido en React.
       </p>
-      <button
-        className="mt-4 bg-blue-500 text-white px-6 py-2
-rounded-lg shadow-md hover:bg-blue-700"
-      >
-        ¡Haz clic aquí!
-      </button>
+      <div className="px-5 py-2.5 bg-pink-300 rounded-2xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex justify-center items-center gap-2.5">
+        <div className="justify-start text-neutral-700 text-xs font-bold font-['Inter']">
+          Diseño con Figma
+        </div>
+      </div>
       <img
-        src="/figma-exported-image.png"
+        src="img/figma-design.png"
         alt="Exportado de Figma"
         className="mt-4 mx-auto w-40"
       />
